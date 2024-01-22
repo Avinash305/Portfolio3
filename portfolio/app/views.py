@@ -12,6 +12,6 @@ def index(request):
             message=request.POST.get('message'),
             ).save()
         messages.success(request, "Your Details submited successfully! Thank You❤️")
-        return redirect("index")
+        return render(request,"index.html")
     return render (request,'index.html')
 
